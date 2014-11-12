@@ -1,8 +1,10 @@
-//  Weather update server
-//  Binds PUB socket to tcp://*:5556
-//  Publishes random weather updates
+#include <assert.h>
+#include <string.h>
+#include <time.h>
+#include <sys/time.h>
+#include <unistd.h>
 
-#include "zhelpers.h"
+#include "zmq.h"
 
 int main (void)
 {
@@ -11,20 +13,14 @@ int main (void)
     void *publisher = zmq_socket (context, ZMQ_PUB);
     int rc = zmq_bind (publisher, "tcp://*:5556");
     assert (rc == 0);
-    
-    //  Initialize random number generator
-    srandom ((unsigned) time (NULL));
-    while (1) {
-        //  Get values that will fool the boss
-        int zipcode, temperature, relhumidity;
-        zipcode     = randof (100000);
-        temperature = randof (215) - 80;
-        relhumidity = randof (50) + 10;
-        
-        //  Send message to all subscribers
+    sleep(1);
+    //  Send message to all subscribers
+    for (int i=0; i<10; i++) {
         char update [20];
-        sprintf (update, "%05d %d %d", zipcode, temperature, relhumidity);
-        s_send (publisher, update);
+        sprintf (update, "HELLO %d", i);
+        //s_send (publisher, update);
+        printf("Sending %s\n", update);
+        zmq_send (publisher, update, strlen(update), 0);
     }
     zmq_close (publisher);
     zmq_ctx_destroy (context);
