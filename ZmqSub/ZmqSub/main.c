@@ -6,6 +6,8 @@
 
 #include "zmq.h"
 
+// PUBLISHER
+
 int main (void)
 {
     //  Prepare our context and publisher

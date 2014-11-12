@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:ZmqPubObjC.xcodeproj">
+      location = "self:ZmqSubObjC.xcodeproj">
    </FileRef>
 </Workspace>

@@ -1,15 +1,14 @@
-
 #import "ZMQObjC.h"
-
+// SUBSCRIBER
 int
 main(int argc, const char *argv[])
 {
     NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
     ZMQContext *ctx = [[[ZMQContext alloc] initWithIOThreads:1U] autorelease];
     
-    // Socket to talk to server
     ZMQSocket *subscriber = [ctx socketWithType:ZMQ_SUB];
-    if (![subscriber connectToEndpoint:@"tcp://localhost:5556"]) {
+    //if (![subscriber connectToEndpoint:@"tcp://localhost:5556"]) {
+    if (![subscriber bindToEndpoint:@"tcp://*:5556"]) {
         /* ZMQSocket will already have logged the error. */
         return EXIT_FAILURE;
     }

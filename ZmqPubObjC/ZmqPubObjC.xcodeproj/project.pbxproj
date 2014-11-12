@@ -29,7 +29,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		B0F25AB11A13499E0014C288 /* ZmqPubObjC */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ZmqPubObjC; sourceTree = BUILT_PRODUCTS_DIR; };
+		B0F25AB11A13499E0014C288 /* ZmqSubObjC */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ZmqSubObjC; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0F25AB41A13499E0014C288 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B0F25ABB1A134C320014C288 /* ZMQContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZMQContext.h; sourceTree = "<group>"; };
 		B0F25ABC1A134C320014C288 /* ZMQContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZMQContext.m; sourceTree = "<group>"; };
@@ -65,7 +65,7 @@
 				B0F25AE41A1352A10014C288 /* libsodium.a */,
 				B0F25AC71A134DCF0014C288 /* libstdc++.dylib */,
 				B0F25AC51A134D710014C288 /* libzmq.a */,
-				B0F25AB31A13499E0014C288 /* ZmqPubObjC */,
+				B0F25AB31A13499E0014C288 /* ZmqSubObjC */,
 				B0F25AB21A13499E0014C288 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -73,12 +73,12 @@
 		B0F25AB21A13499E0014C288 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B0F25AB11A13499E0014C288 /* ZmqPubObjC */,
+				B0F25AB11A13499E0014C288 /* ZmqSubObjC */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		B0F25AB31A13499E0014C288 /* ZmqPubObjC */ = {
+		B0F25AB31A13499E0014C288 /* ZmqSubObjC */ = {
 			isa = PBXGroup;
 			children = (
 				B0F25ABB1A134C320014C288 /* ZMQContext.h */,
@@ -90,15 +90,16 @@
 				B0F25AC11A134C320014C288 /* ZMQSocket.m */,
 				B0F25AB41A13499E0014C288 /* main.m */,
 			);
+			name = ZmqSubObjC;
 			path = ZmqPubObjC;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		B0F25AB01A13499E0014C288 /* ZmqPubObjC */ = {
+		B0F25AB01A13499E0014C288 /* ZmqSubObjC */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B0F25AB81A13499E0014C288 /* Build configuration list for PBXNativeTarget "ZmqPubObjC" */;
+			buildConfigurationList = B0F25AB81A13499E0014C288 /* Build configuration list for PBXNativeTarget "ZmqSubObjC" */;
 			buildPhases = (
 				B0F25AAD1A13499E0014C288 /* Sources */,
 				B0F25AAE1A13499E0014C288 /* Frameworks */,
@@ -108,9 +109,9 @@
 			);
 			dependencies = (
 			);
-			name = ZmqPubObjC;
+			name = ZmqSubObjC;
 			productName = ZmqPubObjC;
-			productReference = B0F25AB11A13499E0014C288 /* ZmqPubObjC */;
+			productReference = B0F25AB11A13499E0014C288 /* ZmqSubObjC */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
@@ -139,7 +140,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				B0F25AB01A13499E0014C288 /* ZmqPubObjC */,
+				B0F25AB01A13499E0014C288 /* ZmqSubObjC */,
 			);
 		};
 /* End PBXProject section */
@@ -247,7 +248,7 @@
 					/Users/ivostoy/Downloads/libzmq_dist/lib,
 					/Users/ivostoy/lib,
 				);
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = ZmqSubObjC;
 			};
 			name = Debug;
 		};
@@ -265,7 +266,7 @@
 					/Users/ivostoy/Downloads/libzmq_dist/lib,
 					/Users/ivostoy/lib,
 				);
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = ZmqSubObjC;
 			};
 			name = Release;
 		};
@@ -281,13 +282,14 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B0F25AB81A13499E0014C288 /* Build configuration list for PBXNativeTarget "ZmqPubObjC" */ = {
+		B0F25AB81A13499E0014C288 /* Build configuration list for PBXNativeTarget "ZmqSubObjC" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B0F25AB91A13499E0014C288 /* Debug */,
 				B0F25ABA1A13499E0014C288 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
