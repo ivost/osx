@@ -1,0 +1,16 @@
+#! /bin/bash
+#
+#   mkmans - rebuild man pages
+#
+#   Author: Pieter Hintjens <ph@imatix.com>
+#   License: public domain
+#
+#   syntax: mkmans
+#
+
+rm -f *.xml    #   Makefile does not detect version differences for XML
+for FILE in z*.txt; do 
+    make `basename $FILE .txt`.xml
+done
+make --quiet
+
